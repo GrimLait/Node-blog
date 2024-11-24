@@ -5,7 +5,6 @@ let PORT = process.env.PORT || 3000;
 let path = require('path')
 let mongoose = require('mongoose')
 let Post = require("./models/postModel");
-let config = require("./config/database");
 let methodOverrirde = require('method-override');
 
 let db = process.env.MONGODB_URI;
