@@ -1,3 +1,4 @@
+require('dotenv').config();
 let express = require('express');
 let app = express();
 let PORT = process.env.PORT || 3000;
@@ -7,7 +8,7 @@ let Post = require("./models/postModel");
 let config = require("./config/database");
 let methodOverrirde = require('method-override');
 
-let db = config.database;
+let db = process.env.MONGODB_URI;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
